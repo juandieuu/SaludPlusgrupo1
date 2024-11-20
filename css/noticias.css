@@ -1,0 +1,165 @@
+/* General Styles */
+:root {
+    --primary-color: #028490;
+    --secondary-color: #16262D;
+    --accent-color: #0D3A45;
+    --background-color: #F5E8D2;
+    --text-color: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 35px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+header nav ul li img{
+    width: 30px
+}
+
+.noticias {
+    padding: 20px;
+    text-align: center;
+}
+
+.noticias h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.noticia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.noticia {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.noticia img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.noticia h2 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 10px;
+    background-color: var(--accent-color);
+}
+
+.noticia p {
+    padding: 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.leer-mas {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.leer-mas:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+footer .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .contactanos {
+    display: flex;
+    gap: 30px;
+}
+
+footer .contactanos i {
+    font-size: 20px;
+}
+
+footer .boton-contacto button {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    height: auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .boton-contacto button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+footer .boton-contacto button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .noticia-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
